@@ -2,9 +2,9 @@
 Split up a capnp stream into its individual messages.
 
 ## Installation
-```npm i -g capnp-split```
-or
-```yarn add capnp-split```
+`npm i --save capnp-split`  
+or  
+`yarn add capnp-split`
 
 ## Usage
 ```js
