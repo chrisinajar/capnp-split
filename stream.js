@@ -16,7 +16,7 @@ CapnpStream.prototype.readNextMessage = function () {
     return false;
   }
   var size = buffUtil.readSize(this.curBuffer);
-  if (size > this.curBuffer.byteLength) {
+  if (!size || size > this.curBuffer.byteLength) {
     return false;
   }
   this.emit('message', this.curBuffer.slice(0, size));
@@ -29,7 +29,7 @@ CapnpStream.prototype._write = function (chunk, encoding, done) {
   if (!this.curBuffer) {
     this.curBuffer = chunk;
   } else if (chunk.byteLength || chunk.length) {
-    this.curBuffer = Buffer.concat(this.curBuffer, chunk);
+    this.curBuffer = Buffer.concat([this.curBuffer, chunk]);
   }
   while (this.readNextMessage());
 
