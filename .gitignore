@@ -58,3 +58,4 @@ typings/
 .env
 
 test.data
+.DS_Store

@@ -1,8 +1,8 @@
 const test = require('tape');
 const fs = require('fs');
 const through2 = require('through2');
-const bufferUtil = require('./buffer');
-const CapnpStream = require('./stream');
+const bufferUtil = require('./src/buffer');
+const CapnpStream = require('./src/stream');
 
 var data = Buffer.from([
   0x00, 0x00, 0x00, 0x00, // segments = 1

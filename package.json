@@ -8,9 +8,9 @@
     "semistandard": "semistandard",
     "tape": "tape",
     "tap-spec": "tap-spec",
-    "build": "babel ./index.js --out-file=dist.js"
+    "build": "babel --out-dir dist src"
   },
-  "browser": "dist.js",
+  "browser": "dist/index.js",
   "repository": "git@github.com:chrisinajar/capnp-split.git",
   "author": "Chris Vickery <chrisinajar@gmail.com>",
   "license": "MIT",
