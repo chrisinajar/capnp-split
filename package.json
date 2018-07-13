@@ -1,6 +1,6 @@
 {
   "name": "capnp-split",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Split up a capnp stream into its individual messages.",
   "main": "index.js",
   "scripts": {
